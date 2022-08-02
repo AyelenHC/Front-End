@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Estatico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!--Menu del portfolio-->
+    <nav class="navbar Bo fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+                <img src="Logo.png" alt="#" class="float-start align-text-middle menuImg"> <h4 class="Color">Proyecto Final</h4>
+            </a>
+            <button type="button" class="btn btn-primary">Login</button>
+        </div>
+    </nav>
+    <!--Imagen para el encabezado-->
+    <div class="card mat-card" id="encabezado">
+        <img src="EncabezadoPrueba.png" alt="Prueba" class="img">
+    </div>
+    <!--Contenido-->
+    <div class="container-lg-8 m-5 border" id="ContenidoBloque">
+        <div class="row p-4">
+            <div class="col-md-4">
+                <!--FOTO DE PERFIL-->
+                <div class="card mat-card bg-dark text-white p-3 d-flex">
+                    <img class="card-img-top p-4" src="FotoPerfil.png" alt="Card image cap">
+                    <div class="container d-flex justify-content-between">
+                        <h3 class="card-title">CONTACTO:</h3>
+                        <div class="btn-edit" id="boton-Contenido" onclick="boton('1')">
+                            <a href="#" class="btn-right">
+                                <button type="button" class="btn btn-outline-light">editar</button> 
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="Color">
+                    <div class="container text-white">
+                        <b><h5 class="card-title">TELEFONO: </h5></b>
+                        <p id="texto-Contacto1">2222 0000220 </p>
+                        <div>
+                            <input id="edit-Contacto1" type="text" oninput="myFunction2('texto-Contacto1','edit-Contacto1',this.value)" style="display:none"> 
+                        </div>
+                        <b><h5 class="card-title">UBICACIÓN: </h5></b>
+                        
+                        <p id="texto-Contacto2">San Luis, Argentina</p>
+                        <div>
+                            <input id="edit-Contacto2" type="text" oninput="myFunction2('texto-Contacto2','edit-Contacto2',this.value)" style="display:none"> 
+                        </div>
+                        <b><h5 class="card-title">GMAIL: </h5></b>
+                        <p id="texto-Contacto3">humerez.ayelen@gmail.com</p>
+                        <div>
+                            <input id="edit-Contacto3" type="text" oninput="myFunction2('texto-Contacto3','edit-Contacto3',this.value)" style="display:none"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8" id="bloqueDos">
+                <!--Acerca de mi-->
+                <div class="container-md d-flex justify-content-between mt-4">
+                    <div class="container text-center">
+                        <h1>ACERCA DE MI</h1>
+                    </div>
+                    <div class="justify-content-end" onclick="boton('2')">
+                        <button type="button" class="btn btn-outline-dark">Editar</button>
+                    </div>
+                </div>
+                <div class="card mat-card mb-4 mt-4 p-2">
+                    <h3 class="card-text" id="texto-AcercaDeMi">Mi nombre es <b>Ayelen Humerez</b>, tengo 19 años.
+                        ............................................................................
+                        ............................................................................
+                        ............................................................................
+                    </h3>
+                    <div>
+                        <input id="edit-AcercaDeMi" type="text" oninput="myFunction2('texto-AcercaDeMi','edit-AcercaDeMi',this.value)" style="display:none">
+                    </div>
+                </div>
+                <!--Experiencia-->
+                <h2>Experiencia</h2>
+                <div class="container bg-dark border text-white pb-3 mb-3 mt-4">
+                    <h3 class="mt-3">Proyectos Realizados</h3>
+                </div>
+                <div class="container bg-light border">
+                    <div class="row border mt-2 mb-2">
+                        <div class="col-sm-2">
+                            <img src="CatvsMice.png" alt="Proyecto1" class="rounded-circle pt-2 pb-2" style="width: 100px;">
+                        </div>
+                        <div class="col m-2">
+                            <div class="container d-flex justify-content-between">
+                                <h4 id="texto-Proyecto1">NOMBRE PROYECTO</h4>
+                                <div>
+                                    <input id="edit-Proyecto1" type="text" oninput="myFunction2('texto-Proyecto1','edit-Proyecto1',this.value)" style="display:none"> 
+                                </div>
+                                <button type="button" class="btn btn-outline-dark" onclick="boton('3')">editar</button>
+                            </div>
+                            <div>
+                                <h6><b>Duracion: </b></h6>
+                                <p id="texto-Proyecto1_1">...................................................................</p>
+                                <div>
+                                    <input id="edit-Proyecto1_1" type="text" oninput="myFunction2('texto-Proyecto1_1','edit-Proyecto1_1',this.value)" style="display:none"> 
+                                </div>
+                                <h6><b>Herramientas utilizadas: </b></h6>
+                                <p id="texto-Proyecto1_2">..................................................................</p>
+                                <div>
+                                    <input id="edit-Proyecto1_2" type="text" oninput="myFunction2('texto-Proyecto1_2','edit-Proyecto1_2',this.value)" style="display:none"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border mt-2 mb-2">
+                        <div class="col-sm-2">
+                            <img src="FrondEnd.jpg" alt="FrontEnd" class="rounded-circle pt-2 pb-2" style="width: 105px;">
+                        </div>
+                        <div class="col m-2">
+                            <div class="container d-flex justify-content-between">
+                                <h4 id="texto-Proyecto2">NOMBRE PROYECTO</h4>
+                                <div>
+                                    <input id="edit-Proyecto2" type="text" oninput="myFunction2('texto-Proyecto2','edit-Proyecto2',this.value)" style="display:none"> 
+                                </div>
+                                <button type="button" class="btn btn-outline-dark" onclick="boton('4')">editar</button>
+                            </div>
+                            <h6><b>Duracion: </b></h6>
+                                <p id="texto-Proyecto2_1">...................................................................</p>
+                                <div>
+                                    <input id="edit-Proyecto2_1" type="text" oninput="myFunction2('texto-Proyecto2_1','edit-Proyecto2_1',this.value)" style="display:none"> 
+                                </div>
+                                <h6><b>Herramientas utilizadas: </b></h6>
+                                <p id="texto-Proyecto2_2">..................................................................</p>
+                                <div>
+                                    <input id="edit-Proyecto2_2" type="text" oninput="myFunction2('texto-Proyecto2_2','edit-Proyecto2_2',this.value)" style="display:none"> 
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEGUNDO BLOQUE (Estudios)-->
+                <div class="col mt-3">
+                    <div class="container bg-dark border text-white mb-3">
+                        <h3 class="mt-3 mb-3">Educacion</h3>
+                    </div>
+                    <div class="container border p-4 Bloque">
+                        <div class="container pb-2 border-light d-flex justify-content-between">
+                            <h3><b>Secundaria</b></h3>
+                            <button type="button" class="btn btn-outline-dark" onclick="boton('5')">editar</button>
+                        </div>
+                        <div class="espaciado">
+                            <h6><b>Titulo: </b></h6>
+                            <div>
+                                <p id="texto-Educacion1">Tecnico Profesional en Informatica</p>
+                                <input id="edit-Educacion1" type="text" oninput="myFunction2('texto-Educacion1','edit-Educacion1',this.value)" style="display:none"> 
+                            </div>
+                            <h6><b>Estado: </b></h6>
+                            <div>
+                                <p id="texto-Educacion2">Finalizado</p>
+                                <input id="edit-Educacion2" type="text" oninput="myFunction2('texto-Educacion2','edit-Educacion2',this.value)" style="display:none"> 
+                            </div>
+                            <h6><b>Fecha de Inicio: </b></h6>
+                            <div>
+                                <p id="texto-Educacion3">2015</p>
+                                <input id="edit-Educacion3" type="text" oninput="myFunction2('texto-Educacion3','edit-Educacion3',this.value)" style="display:none"> 
+                            </div>
+                            <h6><b>Fecha de Finalizacion: </b></h6>
+                            <div>
+                                <p id="texto-Educacion4">2021</p>
+                                <input id="edit-Educacion4" type="text" oninput="myFunction2('texto-Educacion4','edit-Educacion4',this.value)" style="display:none"> 
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container p-4 border mb-3 Bloque">
+                        <div class="container border-2 pb-2 d-flex justify-content-between">
+                            <h3><b>Universidad</b></h3>
+                            <button type="button" class="btn btn-outline-dark" onclick="boton('6')">editar</button>
+                        </div>
+                        <h6><b>Carrera: </b></h6>
+                        <div>
+                            <p id="texto-Educacion2_1">Ingenieria en Informatica</p>
+                            <input id="edit-Educacion2_1" type="text" oninput="myFunction2('texto-Educacion2_1','edit-Educacion2_1',this.value)" style="display:none"> 
+                        </div>
+                        <h6><b>Estado: </b></h6>
+                        <div>
+                            <p id="texto-Educacion2_2">En curso</p>
+                            <input id="edit-Educacion2_2" type="text" oninput="myFunction2('texto-Educacion2_2','edit-Educacion2_2',this.value)" style="display:none"> 
+                        </div>
+                        <h6><b>Inicio: </b></h6>
+                        <div>
+                            <p id="texto-Educacion2_3">2022</p>
+                            <input id="edit-Educacion2_3" type="text" oninput="myFunction2('texto-Educacion2_3','edit-Educacion2_3',this.value)" style="display:none"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--JAVASCRIPT-->
+    <script>
+        var contador=0;
+        function boton(num){
+            switch(num){
+                case '1':
+                    editar_Texto('texto-Contacto1','edit-Contacto1');
+                    editar_Texto('texto-Contacto2','edit-Contacto2');
+                    editar_Texto('texto-Contacto3','edit-Contacto3');
+                break;
+                case '2':
+                    editar_Texto('texto-AcercaDeMi','edit-AcercaDeMi');
+                break;
+                case '3':
+                    editar_Texto('texto-Proyecto1','edit-Proyecto1');
+                    editar_Texto('texto-Proyecto1_1','edit-Proyecto1_1');
+                    editar_Texto('texto-Proyecto1_2','edit-Proyecto1_2');
+                    contador=1;
+                break;
+                case '4':
+                    editar_Texto('texto-Proyecto2','edit-Proyecto2');
+                    editar_Texto('texto-Proyecto2_1','edit-Proyecto2_1');
+                    editar_Texto('texto-Proyecto2_2','edit-Proyecto2_2');
+                    contador=1;
+                break;
+                case '5':
+                    editar_Texto('texto-Educacion1','edit-Educacion1');
+                    editar_Texto('texto-Educacion2','edit-Educacion2');
+                    editar_Texto('texto-Educacion3','edit-Educacion3');
+                    editar_Texto('texto-Educacion4','edit-Educacion4');
+                break;
+                case '6':
+                    editar_Texto('texto-Educacion2_1','edit-Educacion2_1');
+                    editar_Texto('texto-Educacion2_2','edit-Educacion2_2');
+                    editar_Texto('texto-Educacion2_3','edit-Educacion2_3');
+                break;
+            }
+        }
+
+        //Funcion General para editar el texto
+        //variable global
+        var globalTextEdit=0;
+        function editar_Texto(texto,textoEditar){
+            document.getElementById(textoEditar).style.display="block";
+            let TextoNuevo= document.getElementById(texto).innerText;
+            console.log(TextoNuevo);
+        }
+        function myFunction2(text,textoAEditar,contenido){
+            document.getElementById(text).innerText=contenido;
+            globalTextEdit=textoAEditar;
+        }
+        
+        //Al presionar enter
+        function presionar_Enter(){
+            enter_Tecla=event.keyCode;
+            if(enter_Tecla==13){
+                document.getElementById(globalTextEdit).style.display="none";
+            }
+        }
+        //Para que se ejecute cuando se presione enter
+        window.onkeydown= presionar_Enter;
+    </script>
+</body>
+</html>
